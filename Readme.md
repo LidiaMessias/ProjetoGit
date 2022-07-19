@@ -14,4 +14,10 @@ Para alterar o nome da branch principal digitamos => git branch -M "main"
 
 Github é uma plataforma para hospedar todos os nossos códigos. Dessa forma podemos acessar em qualquer computador, através da nossa conta do GitHub, todos os códigos que estão armazenados nele e puxar para o computador.
 
+Depois de criar um novo repositório no Github clicando no botão verde (New Repository), vamos linká-lo ao repositório do nosso projeto que está no computador. Para isso vamos digitar no gitbash => git remote add origin https://github.com/LidiaMessias/ProjetoGit.git (esse é o endereço do repositório que criamos no github).
+Com esse comando estamos falando para o Git fazer a conexão do nosso repositório local com o repositório do GitHub.
 
+Com o git já conectado com o GitHub só falta o comando para ele enviar o que já temos no nosso computador para o repositório do GitHub. O comando é => git push -u origin master (master é o nome da branch principal).
+Com esse comando ele pede para autenticarmos o acesso ao Github para certificar que somos nós mesmos que estamos enviando o código (para não correr o risco de outras pessoas alterarem nosso código), e assim que fizermos a autenticação, é só cliar no botão de atualizar a página e ele já carregou nosso projeto.
+
+Depois de feito mais alterações no nosso projeto, criado novos arquivos e etc, temos que usar git add novamente para enviar os arquivos para a área de standing. Podemos digitar o nome do arquivo que foi modificado ou simplesmente digitar . (ponto) que ele vai mandar todos os arquivos do projeto. O comando é => git add .
