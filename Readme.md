@@ -33,3 +33,65 @@ Em seguida, fazemos as alterações/criações que queremos e salvamos. E depois
 git add .
 git commit -m "Criação do arquivo novo botão" 
 git push origin novo-botao (Repare que aqui estamos colocando o nome da nova branch, então o git vai enviar para o GitHub a nova branch e tudo o que a gente fez nela)
+
+Para retornar ou alterar de uma branch para outra digitamos:
+git checkout master (master é o nome da branch que queremos acessar, então ele sai da branch atual e vai para a master)
+
+Para mesclarmos o que foi feito em uma branch secundária (novo-botao) com o que está na branch principal (master) precisamos estar dentro da branch master e em seguida digitamos:
+git merge novo-botao (novo-botao é o nome da branch que queremos juntar à principal)
+
+E para jogarmos essa mesclagem para o Github usamos o mesmo comando que joga as alterações/criações para o repositório remoto (Github):
+git push origin master
+Os arquivos que antes só apareciam na branch secundária, lá no GitHub agora já aparecem na branch master, uma vez que fizemos a mesclagem dos 2 arquivos. (merge)
+
+Agora vamos ver como puxar todo o meu projeto que está no GitHub para o meu computador. Isso serve para quando usamos mais de um computador para fazermos nosso projeto, por exemplo, um aqui em casa e outro na casa da minha mãe. Posso deixar ele sempre atualizado para que eu acesse ele em qualquer lugar que eu estiver.
+
+Lá no GitHub entramos no nosso perfil, clicamos em repositórios, selecionamos o repositório que queremos acessar e vai aparecer um botão verde escrito CODE. Clicamos nele e copiamos o link que aparece com o botão de cópia que fica ao lado do nome do link.
+Em seguida criamos uma nova pasta no computador onde queremos clonar o nosso projeto que está no Github. Criei a pasta com o nome de GitTutorial
+Abrimos essa pasta e clicamos com o botão direito, e selecionamos Git Bash Here. Ele vai abrir um terminal gitbash e nele vamos digitar:
+git clone https://github.com/rafaballerini/GitTutorial.git (git clone <link que copiamos lá do Github>)
+
+Ele vai criar nessa pasta uma cópia do projeto que estava no GitHub. 
+Quando quisermos pegar alguma atualização de um projeto do GitHub que a gente já tenha feito o clone, e que tenha novas alterações/criações:
+Temos que entrar na pasta do projeto, para esse exemplo, no gitbash vamos digitar:
+cd gittutorial (gittutorial é o nome da pasta do projeto)
+Dentro da pasta digitamos:
+git pull
+
+Se o projeto já estiver aberto no VS Code, feche ele e abra de novo. Pronto, as alterações já foram atualizadas na nossa pasta do computador.
+
+Podemos clonar também repositórios de outras pessoas através do link que elas nos passarem. Nesse caso aqui, se eu quiser que o repositório GitTutorial da Rafa Ballerini seja copiado para meus repositórios no GitHub devemos:
+Clicar no botão FORK que está no canto superior direito da página do repositório dessa pessoa
+Na próxima página que abrir siga as instruções da tela e clique em CREATE A FORK.
+Pronto, o repositório foi copiado para o seu GitHub.
+
+Por último vamos aprender como utilizar o Pull Request
+Quando fazemos um fork de um projeto de alguém, clonamos no nosso computador e fazemos algumas alterações/criações em cima desse projeto dessa pessoa, a gente pode questionar a pessoa se ela quer adicionar essas nossas alterações no projeto dela.
+Para isso a gente faz um Pull Request para essa pessoa, uma solicitação para ela fazer um pull da alteração que fizemos. Daí a pessoa aceita ou não. 
+Depois que fizermos as alterações/criações nesse projeto e atualizarmos ele no nosso Github, a gente vai clicar no botão Contribute que fica na linha debaixo do botão Code e vamos clicar no botão:
+OPEN PULL REQUEST 
+Ele vai abrir uma nova tela e nos informar se estamos Able to merge. Se sim, clicamos no botão CREATE PULL REQUEST
+Sempre que fizermos um pull request vai abrir uma tela para escrevermos comentários para o desenvolvedor do projeto sobre todas as alterações que fizemos. Escrevemos tudo que quisermos informar para essa pessoa. Digitado o comentário clicamos no botão CREATE PULL REQUEST que fica lobo abaixo da caixa de comentários.
+Feito isso esperamos a resposta da pessoa.
+
+Como aceitar um PULL REQUEST
+No nosso perfil, no repositório de um projeto nosso, na linha de menu tem a opção de Pull requests. Se existir algum pull request que nos foi solicitado ele aparecerá alí.
+Quando clicamos nessa opção (Pull Request) vai abrir uma outra tela com as solicitações de pull request que fizeram para nós e com os comentários do que se trata. Se estivermos de acordo e for do nosso interesse, clicamos no botão:
+MERGE PULL REQUEST e ele atualiza o projeto no nosso repositório remoto com as alterações feitas por essa pessoa. Se quisermos trazer essas alterações para o repositório do nosso projeto no NOSSO COMPUTADOR, seguimos os mesmos passos já descritos um pouco acima, que são para atualizar nosso repositório com alterações que estão no repositório remoto (GitHub):
+Temos que entrar na pasta do projeto dentro do gitbash;
+cd <nome da pasta do projeto>
+E dentro da pasta digitamos:
+git pull
+
+Pronto, tudo atualizado.
+
+
+
+
+
+
+
+
+
+
+
