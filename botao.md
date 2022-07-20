@@ -1,0 +1,2 @@
+Esse arquivo foi criado para demonstrar o uso de uma nova branch. Vamos criar e alterar coisas nessa branch, e não na principal. Se tudo estiver certo, jogamos essas alterações/criações para a branch principal. 
+Vamos aprender como fazer isso.

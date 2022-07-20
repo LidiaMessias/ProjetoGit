@@ -20,4 +20,16 @@ Com esse comando estamos falando para o Git fazer a conexão do nosso repositór
 Com o git já conectado com o GitHub só falta o comando para ele enviar o que já temos no nosso computador para o repositório do GitHub. O comando é => git push -u origin master (master é o nome da branch principal).
 Com esse comando ele pede para autenticarmos o acesso ao Github para certificar que somos nós mesmos que estamos enviando o código (para não correr o risco de outras pessoas alterarem nosso código), e assim que fizermos a autenticação, é só cliar no botão de atualizar a página e ele já carregou nosso projeto.
 
-Depois de feito mais alterações no nosso projeto, criado novos arquivos e etc, temos que usar git add novamente para enviar os arquivos para a área de standing. Podemos digitar o nome do arquivo que foi modificado ou simplesmente digitar . (ponto) que ele vai mandar todos os arquivos do projeto. O comando é => git add .
+Depois de feito mais alterações no nosso projeto, criado novos arquivos e etc, temos que usar git add novamente para enviar os arquivos para a área de standing. Podemos digitar o nome do arquivo que foi modificado ou simplesmente digitar . (ponto) que ele vai mandar todos os arquivos do projeto. O comando é => git add . E em seguida temos que commitar essas alterações e inclusões => git commit -m "Nome das nossas alterações ou inclusões, o que quisermos escrever".
+
+Depois do commit feito temos que jogar esse commit para o GitHub, então digitamos: git push origin master (Lembrando que a primeira vez que fazemos a conexão do repositório com o GitHub usamos o -u no comando, as demais vezes não precisa usá-lo mais). Com esse comando o git atualiza nosso projeto no GitHub.
+
+Branch => Branch é uma ramificação do repositório principal do nosso projeto (master). A branch é utilizada para criarmos ou alterarmos alguma coisa sem jogar/mexer na branch master. É muito utilizada para que façamos os testes primeiro para saber se está tudo funcionando, antes de jogar essas alterações/criações para a branch principal do projeto.
+
+Para criar uma branch => git checkout -b "novo-botao" (Entre parênteses o nome da nova branch, pode ser qualquer nome)
+Com esse comando, além do git criar uma nova branch (novo-botao) ele vai sair da branch master e já entrar nessa branch criada.
+
+Em seguida, fazemos as alterações/criações que queremos e salvamos. E depois, temos que fazer o mesmo processo para commitar essas alterações/criações feitas e jogar lá no nosso repositório remoto (GitHub).
+git add .
+git commit -m "Criação do arquivo novo botão" 
+git push origin novo-botao (Repare que aqui estamos colocando o nome da nova branch, então o git vai enviar para o GitHub a nova branch e tudo o que a gente fez nela)
